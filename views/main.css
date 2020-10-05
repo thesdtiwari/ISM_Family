@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+body{
+    background-color:aliceblue;
+}
+
+#batches{
+  color: red;
+  font-family: 'Dancing Script', cursive;
+  font: outline;
+  font-weight: bolder;
+  font-size:larger;
+}
+
+#events{
+  font-family: 'Cedarville Cursive', cursive;
+  color: red;
+  font: outline;
+  font-weight: bolder;
+  font-size:xx-large;
+}
+
+#batch-2020-vis, #batch-2021-vis, #batch-2022-vis, #batch-2023-vis, #batch-2024-vis , #freshers-2018 , #holi-2019, #ganesh-chaturthi-2019, #freshers-2019 , #holi-2020 , #others{
+  margin: 2%;
+  border-style: ridge;
+  border-width: 7px;
+  border-color: coral;
+  overflow: hidden;
+}
+
+.batch-name{
+  color:red;
+  font-size: 10vh;
+}
+
+img{
+ height:280px;
+ max-height: 700px;
+} 
+
+#states img{
+  max-height: 600px;
+}
+
+#batches img:hover{
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+  
+}
+
+#batches .card  {
+  height: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: height 1000ms;
+}
+
+#states .card{
+  max-height: 800px;
+}
+
+#batches .card.expanded {
+  height: 600px;
+  
+}
+
+.chevron {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
+}
+.card.expanded .chevron {
+  transform: rotate(0deg);
+}
+
+.intern{
+
+  transform: translateY(35px);
+  
+}
+
+
+
+/* // data.create({
+  //     name : 'sdt',
+  //     place : 'MH',
+  //     branch : 'M&C',
+  //     club : 'md',
+  //     intern:'skillovate',
+  //     placed:'amazon',
+  //     image:'./MH/134'  
+  // }); */

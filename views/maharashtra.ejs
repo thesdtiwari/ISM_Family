@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAH_Families</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+
+        <a class=" btn-outline-success mr-2" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <div class="btn-group mr-2">
+                <button type="button" class="btn  dropdown-toggle btn-outline-success " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Members
+                </button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#batch-2021-vis" id="batch-2021-nav">2016_Batch</a>
+                <a class="dropdown-item" href="#batch-2022-vis" id="batch-2022-nav">2017_Batch</a>
+                <a class="dropdown-item" href="#batch-2023-vis" id="batch-2023-nav">2018_Batch</a>
+                <a class="dropdown-item" href="#batch-2024-vis" id="batch-2024-nav">2019_Batch</a>
+                </div>
+            </div>
+
+
+            
+            <div class="btn-group mr-2">
+                <button type="button" class="btn  dropdown-toggle btn-outline-success " id="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Events
+                </button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#freshers-2018" id="freshers-2018-nav">Freshers-2018</a>
+                <a class="dropdown-item" href="#holi-2019" id="holi-2019-nav">Holi-2019</a>
+                <a class="dropdown-item" href="#ganesh-chaturthi-2019" id="ganesh-chaturthi-2019-nav">Ganesh Chaturthi 2019</a>
+                <a class="dropdown-item" href="#freshers-2019" id="freshers-2019-nav">Freshers-2019</a>
+                <a class="dropdown-item" href="#holi-2020" id="holi-2020-nav">Holi-2020</a>
+                <a class="dropdown-item" href="#others" id="others-nav">Others</a>
+                </div>
+            </div>
+
+            <form class="form-inline my-2 my-lg-0  ml-auto  ">
+                <button class="btn btn-outline-success my-2 my-sm-0" ><a href="/add" > Add</a> </button> 
+            </form>
+            
+        </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.holidify.com/images/cmsuploads/articles/458.jpg);    height: 50vh; object-fit: stretch; height: 95vh; background-size: cover; " >
+        <div class="container text-center">
+          <h1 class="display-4"  style="color: brown; font-weight: 900; ">MAH_Family</h1>
+          <p class="lead  " style="color: white; font-weight: 900; "  >Jai Maharashtra</p>
+        </div>
+</div>
+
+<ul class="nav nav-tabs  " >
+    <li class="nav-item  ml-auto mr-2 border " id="members" >
+      <div class="nav-link active " id="member-active" href="#">Members</div>
+    </li>
+    <li class="nav-item mr-3 border border-active " id="events-Btn" >
+        <div class="nav-link " id="event-active" href="#">Events</div>
+    </li>
+</ul>
+
+<div id="batches">
+    
+    <div class="dropdown" id="batch2021">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;">
+        2016-Batch
+        </div>
+    </div>
+    <div class="d-none" id="batch-2021-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2016 -Batch</div> 
+            <div class="container d-flex justify-content-around flex-column">
+                <div class="row justify-content-around ">    
+                        
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                          
+                        <% params.forEach(function(sdt){ %>  
+                            <% if(sdt.year == 2016 && sdt.state == "Maharashtra"){ %>
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <div class="card-body ">
+                                    <p class="card-text"><div><%= sdt.name %></div>
+                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
+                                        <div><%= sdt.branch %> </div></p>
+                                    </div>
+                                    <br>
+                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
+
+                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                        
+                  
+                   
+                        
+                        
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="batch2022">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >
+        2017-Batch
+        </div>
+    </div>
+    <div class="d-none" id="batch-2022-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2017 -Batch</div> 
+            <div class="container d-flex justify-content-around flex-column">
+                <div class="row justify-content-around">    
+                        
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            
+                            
+                
+                        <div class="card m-3" style="width: 18rem;">
+                            <img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/1888657.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card m-3" style="width: 18rem;">
+                            <img src="https://i.pinimg.com/564x/e2/29/5f/e2295f7b9b470f873d0cc4b088ac0726.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <% params.forEach(function(sdt){ %>  
+                            <% if(sdt.year == 2017 && sdt.state == "Maharashtra"){ %>
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <div class="card-body ">
+                                    <p class="card-text"><div><%= sdt.name %></div>
+                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
+                                        <div><%= sdt.branch %> </div></p>
+                                    </div>
+                                    <br>
+                                     <div class="intern">Intern : <%= sdt.intern %> <br> Placed : <%= sdt.placed %> </div>
+
+                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                        
+                        
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="batch2023">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >
+        2018-Batch
+        </div>
+    </div>
+    <div class="d-none" id="batch-2023-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2018 -Batch</div> 
+            <div class="container d-flex justify-content-around flex-column">
+                <div class="row justify-content-around">    
+                        
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            <div class="card m-3" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p class="card-text"><div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                                </div>
+                            </div>
+                            
+                            
+                
+                        <div class="card m-3" style="width: 18rem;">
+                            <img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/1888657.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card m-3" style="width: 18rem;">
+                            <img src="https://i.pinimg.com/564x/e2/29/5f/e2295f7b9b470f873d0cc4b088ac0726.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <% params.forEach(function(sdt){ %>  
+                            <% if(sdt.year == 2018 && sdt.state == "Maharashtra"){ %>
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <div class="card-body ">
+                                    <p class="card-text"><div><%= sdt.name %></div>
+                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
+                                        <div><%= sdt.branch %> </div></p>
+                                    </div>
+                                    <br>
+                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
+
+                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                        
+                        
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="batch2024">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >
+        2019-Batch
+        </div>
+    </div>
+    <div class="" id="batch-2024-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2019-Batch</div> 
+            <div class="container d-flex   flex-column">  
+                <div class="row justify-content-around">    
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <div class="img-container">
+                            <img src="/public/IMG_20200909_143006.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body ">
+                            <p class="card-text">
+                                <div>Saurabh Tiwari</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div>
+                            </p>
+                            <div class="intern">Intern :Skillovate<br>Placed : Amazon</div>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200911_133451.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Pratik Bedre</div>
+                            <div>Washim,Maharashtra</div>
+                            <div>Computer Science</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200909_142528.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Deep Mandlik</div>
+                            <div>Nagpur,Maharashtra</div>
+                            <div>Engineering Physics</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200909_142223.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Himanshu Nagdev</div>
+                        <div>Gondia,Maharashtra</div>
+                        <div>Mining Machinery</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200909_142407.jpg" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                        <p class="card-text"><div>Tejas Dhanagare</div>
+                            <div>Latur,Maharashtra</div>
+                            <div>Electrical Engineering</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200911_133550.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Atharva Deshmukh</div>
+                            <div>Akluj,Maharashtra</div>
+                            <div>Computer Science</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200909_142433.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Omkar Kawatgi</div>
+                            <div>Nanded,Maharashtra</div>
+                            <div>Applied Geology</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                        <img src="/public/IMG_20200909_142241.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><div>Rutik Devkar</div>
+                        <div>Nashik,Maharashtra</div>
+                        <div>Chemical Engineering</div></p>
+                        </div>
+                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                    </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133533.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Mahim Wahane</div>
+                                <div>Bhandara,Maharashtra</div>
+                                <div>Mineral Engineering</div></p>
+                            </div>
+                            <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/Screenshot_2020-09-11-14-39-43-05.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Bhavesh Bansod</div>
+                                <div>Nagpur,Maharashtra</div>
+                                <div>Mechanical Engineering</div></p>
+                            </div>
+                            <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142308.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Prasad Gavhane</div>
+                                <div>Pune,Maharashtra</div>
+                                <div>Mineral Engineering</div></p>
+                            </div>
+                            <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142319.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Adhyaay Tharwal</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mining Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142332.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Amit Swami</div>
+                                <div>Latur,Maharashtra</div>
+                                <div>Mechanical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142344.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Priyansh Sharma</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142448.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Avinash Thakur</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Electronics Engineering </div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142505.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Pratik Bharbhat</div>
+                                <div>Nagpur,Maharashtra</div>
+                                <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142516.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Yogesh Fuke</div>
+                                <div>Jalna,Maharashtra</div>
+                                <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142539.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Hemang Mohite</div>
+                                <div>Surat,Gujrat</div>
+                                <div>Mining Engineering</div>.</p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142550.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Himanshu Pardhi</div>
+                                <div>Nagpur,Maharashtra</div>
+                                <div>Chemical</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142603.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Tanvi More</div>
+                                <div>Nashik,Maharashtra</div>
+                                <div>Chemical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142620.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Aachal Dhole</div>
+                                <div>Nanded,Maharashtra</div>
+                                <div>Mechanical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142631.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Yash Meshram</div>
+                                <div>Nagpur,Maharashtra</div>
+                                <div>Mathmatics and Computing</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_142642.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><div>Zayaan Husain Siddiqui</div>
+                                <div>Mumbai,Maharashtra</div>
+                                <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164158.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Sanket Kajare</div>
+                            <div>Mumbai,Maharashtra</div>
+                            <div>Civil Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164212.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Taranjeet Singh</div>
+                            <div>Nagpur,Maharashtra</div>
+                            <div>Mineral Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_171958.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Jidnya Mahale</div>
+                            <div>Nandurbar,Maharashtra</div>
+                            <div>Engineering Physics</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164224.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Nikita Singh</div>
+                            <div>Pune,Maharashtra</div>
+                            <div>Electronics Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164234.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Apoorva Rawjiwar</div>
+                            <div>Nanded,Maharashtra</div>
+                            <div>Mining Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133728.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Atharva Kukde</div>
+                            <div>Nagpur,Maharashtra</div>
+                            <div>Chemical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164247.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Harshal Lanke</div>
+                            <div>Aurangabad,Maharashtra</div>
+                            <div>Mechanical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164300.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Yash Agarwal</div>
+                            <div>Aurangabad,Maharashtra</div>
+                            <div>Petroleum Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133522.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Nikhil Shingne</div>
+                            <div>Buldhana,Maharashtra</div>
+                            <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164327.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Omkar Kurlekar</div>
+                            <div>Mumbai,Maharashtra</div>
+                            <div>Petroleum Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164339.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Prathamesh Wagh</div>
+                            <div>Dhule,Maharashtra</div>
+                            <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164350.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Mandar Deokar</div>
+                            <div>Aurangabad,Maharashtra</div>
+                            <div>Electrical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164403.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Mihir Jichkar</div>
+                            <div>Nagpur,Maharashtra</div>
+                            <div>Computer Science</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164413.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Fatema Kapadia</div>
+                            <div>Pune,Maharashtra</div>
+                            <div>Computer Science</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133657.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Ishal Garg</div>
+                            <div>Pune,Maharashtra</div>
+                            <div>Mathmatics and Computing</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133510.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Mukul Verma</div>
+                            <div>Mumbai,Maharashtra</div>
+                            <div>Computer Science</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133600.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Pratham Tahiliani</div>
+                            <div>Mumbai,Maharashtra</div>
+                            <div>Engineering Physics</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_164425.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Kunal Vaidya </div>
+                            <div>Jalgaon,Maharashtra</div>
+                            <div>Mechanical Engineering</div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_172012.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Siddhant Shelke</div>
+                                <div>Nashik,Maharashtra</div>
+                                <div>Electrical Engineering </div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200909_171946.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Atharva Nadkar</div>
+                                <div>Indore,Madhya Pradesh</div>
+                                <div>Electrical Engineering </div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <img src="/public/IMG_20200911_133718.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                            <p class="card-text"><div>Ankit Verma</div>
+                                <div>Nashik,Maharashtra</div>
+                                <div>Petroleum Engineering </div></p>
+                            </div>
+                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+
+
+                      
+                       <% params.forEach(function(sdt){ %>  
+                            <% if(sdt.year == 2019 && sdt.state == "Maharashtra"){ %>
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <div class="card-body ">
+                                    <p class="card-text"><div><%= sdt.name %></div>
+                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
+                                        <div><%= sdt.branch %> </div></p>
+                                    </div>
+                                    <br>
+                                     <div class="intern">Intern : <%= sdt.intern %> <br> Placed : <%= sdt.placed %> </div>
+
+                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    </div> 
+
+                   
+                       
+                </div>   
+            </div>  
+            </div>
+        </div>
+    </div>
+</div>    
+</div>
+<div id="events" class="d-none" >
+    
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="freshers-2018">
+        <img src="https://www.esquireme.com/public/images/2020/03/16/IMG_4354-e1576713436663.jpg" class="img-fluid m-3" alt="Responsive image">
+        Freshers 2018
+    </div>
+
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="holi-2019">
+        <img src="https://spiderimg.amarujala.com/assets/images/2017/03/08/holi_1488981295.jpeg" class="img-fluid m-3" alt="Responsive image">
+        Holi 2019
+    </div>
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="ganesh-chaturthi-2019">
+        <img src="/public/IMG_20200911_141913.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200909_175018.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200911_141738.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200911_141553.jpg" class="img-fluid m-3" alt="Responsive image">
+
+        Ganesh Chaturthi 2019
+    </div>
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="freshers-2019">
+        <img src="/public/IMG_20200909_175048.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200909_173935.jpg" class="img-fluid m-3" alt="Responsive image">
+        Freshers 2019
+    </div>
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="holi-2020">
+        <img src="/public/Screenshot_2020-09-09-17-47-31-65.png" class="img-fluid m-3" alt="Responsive image">
+        Holi 2020
+    </div>
+    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="others">
+        <img src="/public/IMG_20200911_141317.jpg" class="img-fluid m-3" alt="Responsive image">
+
+        <img src="/public/IMG_20200911_141947.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200911_141930.jpg" class="img-fluid m-3" alt="Responsive image">
+        <img src="/public/IMG_20200911_141640.jpg" class="img-fluid m-3" alt="Responsive image">
+
+
+        Others
+    </div>
+
+
+    
+</div>
+
+<script type="text/javascript"  src="maharashtra.js"></script>
+
+</body>
+</html>  
