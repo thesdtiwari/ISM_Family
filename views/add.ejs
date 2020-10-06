@@ -15,11 +15,11 @@
     <form class="p-5 mt-5 d-flex flex-column justify-content-center " action="/index" method="POST" enctype="multipart/form-data" style="width: 50%; background-color: lightblue;  overflow: hidden;">
         <div class="m-2"  >
             Name <br>
-            <input type="text" placeholder="Enter Name"  name="name" style="width: 100%;" >
+            <input type="text" placeholder="Enter Name"  name="name" style="width: 100%;" required>
         </div>
         <div class="m-2">
             Region
-            <input type="text" name="place" placeholder="Enter Region Name" style="width: 100%;" >
+            <input type="text" name="place" placeholder="Enter Region Name" style="width: 100%;" required>
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">State</label>
@@ -68,7 +68,7 @@
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlFile1">Image</label>
-            <input type="file" name="image" >
+            <input type="file" name="image" required>
         </div> 
             <div><button class="btn btn-primary">Submit</button></div>
     </form>    

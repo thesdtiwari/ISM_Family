@@ -11,7 +11,7 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "views")));
 
-mongoose.connect('mongodb://localhost:27017/ism_family',{useNewUrlParser:true});
+mongoose.connect('mongodb+srv://thesdtiwari:Saurabh100@cluster0.laykv.mongodb.net/ism-data?retryWrites=true&w=majority',{useNewUrlParser:true});
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
