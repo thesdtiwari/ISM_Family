@@ -97,9 +97,8 @@ app.post('/index', upload ,function(req,res){
 });
 
 
-app.listen(3000,  function(){
-    console.log("SERVER IS RUNNING..");
-});
+var port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`listening on:`, port));
 
 
   
