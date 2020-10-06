@@ -695,12 +695,30 @@
                                         <div><%= sdt.branch %> </div></p>
                                     </div>
                                     <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br> Placed : <%= sdt.placed %> </div>
+                                     <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                    <%= sdt.placed %>
                                 </div>
                             <% } %>
                         <% }) %>
+
+
+                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                            <div class="img-container">
+                                <img src="/public/IMG_20200909_143006.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body ">
+                                <p class="card-text">
+                                    <div>Saurabh Tiwari</div>
+                                    <div>Mumbai,Maharashtra</div>
+                                    <div>Mathmatics and Computing</div>
+                                </p>
+                                <div class="intern">Intern :Skillovate<br>Placed : Amazon</div>
+                            </div>
+                            <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                        </div>
+                        
                     </div> 
 
                    
