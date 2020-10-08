@@ -3,6 +3,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path'),
     multer = require('multer'),
+    firebase = require('firebase'),
+    storage = require('@google-cloud/storage'),
     app = express();
 
 app.set('view engine','ejs');
@@ -58,6 +60,12 @@ app.get('/maharashtra',function(req,res){
     });
 })
 
+app.get('/mnc',function(req,res){
+    data.find({}, function(err, allCampgrounds){
+        res.render("mnc", {params :allCampgrounds}); 
+    });
+})
+
 app.get('/add',function(req,res){
     res.render("add");
 })
@@ -72,6 +80,7 @@ app.post('/index', upload ,function(req,res){
         placed  = req.body.placed,
         image   = req.file.path;
     image = image.replace(/\\/g, "/");
+
     data.create({
         name : name,
         state : state,
@@ -87,13 +96,14 @@ app.post('/index', upload ,function(req,res){
             console.log('Entered mh');
             res.render("maharashtra", {params :allCampgrounds});
         });
-    }else{
-        data.find({}, function(err, allCampgrounds){
-            console.log('Entered up');
-
-            res.render("index", {params :allCampgrounds});
-        });
     }
+    // if(branch == "Mathmatics and Computing"){
+    //     data.find({}, function(err, allCampgrounds){
+    //         console.log('MnC');
+    //         res.render("mnc", {params :allCampgrounds});
+    //     });
+    // }
+
 });
 
 
