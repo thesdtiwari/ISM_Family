@@ -66,6 +66,12 @@ app.get('/mnc',function(req,res){
     });
 })
 
+app.get('/mailer_daemon',function(req,res){
+    data.find({}, function(err, allCampgrounds){
+        res.render("mailer_daemon", {params :allCampgrounds}); 
+    });
+})
+
 app.get('/add',function(req,res){
     res.render("add");
 })
@@ -97,12 +103,12 @@ app.post('/index', upload ,function(req,res){
             res.render("maharashtra", {params :allCampgrounds});
         });
     }
-    // if(branch == "Mathmatics and Computing"){
-    //     data.find({}, function(err, allCampgrounds){
-    //         console.log('MnC');
-    //         res.render("mnc", {params :allCampgrounds});
-    //     });
-    // }
+    if(branch == "Mathmatics and Computing"){
+        data.find({}, function(err, allCampgrounds){
+            console.log('MnC');
+            res.render("mnc", {params :allCampgrounds});
+        });
+    }
 
 });
 

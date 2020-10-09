@@ -40,11 +40,6 @@
                 </button>
                 <div class="dropdown-menu">
                 <a class="dropdown-item" href="#freshers-2018" id="freshers-2018-nav">Freshers-2018</a>
-                <a class="dropdown-item" href="#holi-2019" id="holi-2019-nav">Holi-2019</a>
-                <a class="dropdown-item" href="#ganesh-chaturthi-2019" id="ganesh-chaturthi-2019-nav">Ganesh Chaturthi 2019</a>
-                <a class="dropdown-item" href="#freshers-2019" id="freshers-2019-nav">Freshers-2019</a>
-                <a class="dropdown-item" href="#holi-2020" id="holi-2020-nav">Holi-2020</a>
-                <a class="dropdown-item" href="#others" id="others-nav">Others</a>
                 </div>
             </div>
 
@@ -55,10 +50,10 @@
         </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://ecms.adelaide.edu.au/sites/default/files/styles/ua_landscape/public/pure-maths-900px.jpg?itok=56ENjKEx);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " >
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://cdn.searchenginejournal.com/wp-content/uploads/2019/09/647e8cc9-69cd-4fcf-bed8-2ccba7931ef7.jpeg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
         <div class="container text-center">
-          <h1 class="display-4"  style="color: red; font-weight: 900; ">MnC_Family</h1>
-          <p class="lead  " style="color:yellow; font-size: 30px;  font-weight: 900; "  >A real mathematician can mathematically mathematise mathematics in a mathematical mathematiculation. So if a mathematician can mathematise mathematics in a mathematical mathematiculation, why can't you mathematically mathematise.</p>
+          <h1 class="display-4"  style="color: red; font-weight: 900; ">Lorem_Family</h1>
+          <p class="lead  " style="color:yellow; font-size: 30px;  font-weight: 900; "  >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error doloremque aut harum tempora! Doloremque, minima?</p>
         </div>
 </div>
 
@@ -84,22 +79,24 @@
             <div class="container d-flex justify-content-around flex-column">
                 <div class="row justify-content-around ">    
                                                   
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2016 && sdt.branch == "Mathmatics and Computing"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                    <% params.forEach(function(sdt){ %>  
+                        <% if(sdt.year == 2016 && sdt.branch == "Mathmatics and Computing"){ %>
+                            <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                <div class="img-container">
                                     <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-text">
+                                        <div><%= sdt.name %></div>
                                         <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
+                                        <div><%= sdt.branch %> </div>
+                                    </p>
+                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
+                            </div>
+                        <% } %>
+                    <% }) %>
 
                 </div>  
             </div>
@@ -117,22 +114,24 @@
                 <div class="row justify-content-around">    
                         
                            
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2017 && sdt.state == "Maharashtra"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                    <% params.forEach(function(sdt){ %>  
+                        <% if(sdt.year == 2017 && sdt.branch == "Mathmatics and Computing"){ %>
+                            <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                <div class="img-container">
                                     <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-text">
+                                        <div><%= sdt.name %></div>
                                         <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br> Placed : <%= sdt.placed %> </div>
+                                        <div><%= sdt.branch %> </div>
+                                    </p>
+                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
+                            </div>
+                        <% } %>
+                    <% }) %>
                         
                         
                 </div>  
@@ -150,22 +149,24 @@
             <div class="container d-flex justify-content-around flex-column">
                 <div class="row justify-content-around">    
 
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2018 && sdt.branch == "Mathmatics and Computing"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                    <% params.forEach(function(sdt){ %>  
+                        <% if(sdt.year == 2018 && sdt.branch == "Mathmatics and Computing"){ %>
+                            <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                <div class="img-container">
                                     <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-text">
+                                        <div><%= sdt.name %></div>
                                         <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
+                                        <div><%= sdt.branch %> </div>
+                                    </p>
+                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
+                            </div>
+                        <% } %>
+                    <% }) %>
 
                 </div>  
             </div>
@@ -182,52 +183,8 @@
             <div class="container d-flex   flex-column">  
                 <div class="row justify-content-around">    
                     <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                        <div class="img-container">
-                            <img src="/public/IMG_20201008_213211.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body ">
-                            <p class="card-text">
-                                <div>Saurabh Tiwari</div>
-                                <div>Mumbai,Maharashtra</div>
-                                <div>Mathmatics and Computing</div>
-                            </p>
-                            <div class="intern">Intern :Skillovate<br>Placed : Amazon</div>
-                        </div>
-                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                    </div>
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200909_142344.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <p class="card-text"><div>Priyansh Sharma</div>
-                                <div>Mumbai,Maharashtra</div>
-                                <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
-                        
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200909_142631.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <p class="card-text"><div>Yash Meshram</div>
-                                <div>Nagpur,Maharashtra</div>
-                                <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200911_133657.jpg" class="card-img-top" alt="...">
-                            <div class="card-body ">
-                            <p class="card-text"><div>Ishal Garg</div>
-                            <div>Pune,Maharashtra</div>
-                            <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
- 
-
-                      
-                       <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2019 && sdt.branch == "Mathmatics and Computing"){ %>
+                        <% params.forEach(function(sdt){ %>  
+                            <% if(sdt.year == 2019 && sdt.branch == "Mailer Daemon"){ %>
                                 <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                     <div class="img-container">
                                         <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
@@ -244,12 +201,7 @@
                                 </div>
                             <% } %>
                         <% }) %>
-
-                     
-
-                   
-                       
-                </div>   
+                    </div>   
             </div>  
             </div>
         </div>
@@ -263,22 +215,6 @@
         General meetup
     </div>
 
-    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="ganesh-chaturthi-2019">
-        <img src="/public/Screenshot_2020-10-08-20-20-00-25.png" class="img-fluid m-3" alt="Responsive image">
-
-        Shubh Vivah
-    </div>
-    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="others">
-        <video width="400" controls>
-            <source src="public/VID-20201008-WA0045.mp4" type="video/mp4">
-        </video>
-
-
-        Others
-    </div>
-
-
-    
 </div>
 
 <script type="text/javascript"  src="maharashtra.js"></script>
