@@ -11,19 +11,19 @@
     <link rel="stylesheet" href="index.css">
 
 </head>
-<body class="d-flex flex-column justify-content-center align-items-center">
-    <form class="p-5 mt-5 d-flex flex-column justify-content-center " action="/index" method="POST" enctype="multipart/form-data" style="width: 50%; background-color: lightblue;  overflow: hidden;">
+<body class="d-flex flex-column justify-content-center align-items-center ">
+    <form class="p-5 mt-5 d-flex flex-column justify-content-center " id="form"  action="/index" method="POST" enctype="multipart/form-data" style="width: 50%; background-color: lightblue;  overflow: hidden;">
         <div class="m-2"  >
             Name <br>
-            <input type="text" placeholder="Enter Name"  name="name" style="width: 100%;" required>
+            <input type="text" placeholder="Enter Name"  name="name" id="name" style="width: 100%;" required>
         </div>
         <div class="m-2">
             Region
-            <input type="text" name="place" placeholder="Enter Region Name" style="width: 100%;" required>
+            <input type="text" name="place" id="place" placeholder="Enter Region Name" style="width: 100%;" required>
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">State</label>
-            <select name="state"  style="width: 100%;"> 
+            <select name="state" id="state" style="width: 100%;"> 
                 <option value="Maharashtra">Maharashtra</option>
                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                 <option value="Bihar">Bihar</option>
@@ -58,7 +58,7 @@
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">Branch</label>
-            <select name="branch"  style="width: 100%;"  > 
+            <select name="branch" id="branch" style="width: 100%;"  > 
                 <option value="Mathmatics and Computing Engineering">Mathematics and Computing Engineering</option>
                 <option value="Computer Science Engineering">Computer Science Engineering</option>
                 <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
@@ -77,7 +77,7 @@
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">Clubs</label>
-            <select name="club" style="width: 100%;"  > 
+            <select name="club" id="club" style="width: 100%;"  > 
                 <option value="ARCA">ARCA</option>
                 <option value="E-Cell">E-Cell</option>
                 <option value="Cyber labs">Cyber labs</option>
@@ -88,20 +88,19 @@
                 <option value="WTC">WTC</option>
                 <option value="LITM">LITM</option>
                 <option value="LCI">LICI</option>
-
-              </select>
+            </select>
         </div>      
         <div class="m-2">
             Internship<br>
-            <input type="text" name="intern" placeholder="Enter Firm Name" style="width: 100%;" >
+            <input type="text" name="intern" id="intern" placeholder="Enter Firm Name" style="width: 100%;" >
         </div>
         <div class="m-2">
             Placed
-            <input type="text" name="placed" placeholder="Enter Firm Name" style="width: 100%;" >
+            <input type="text" name="placed" id="placed" placeholder="Enter Firm Name" style="width: 100%;" >
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">Year</label>
-            <select name="year" id="cars" style="width: 100%;"  > 
+            <select name="year" id="year" style="width: 100%;"  > 
                 <option value="2019">2019</option>
                 <option value="2018">2018</option>
                 <option value="2017">2017</option> 
@@ -110,12 +109,26 @@
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlFile1">Image</label>
-            <input type="file" name="image" >
+            <input type="file" name="image" id="image">
         </div> 
         <div>
-                <button class="btn btn-primary" style="width: 100%;"  >Submit</button>
+                <button class="btn btn-primary" style="width: 100%;" type="submit" >Submit</button>
         </div>
     </form>    
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script> 
+
+<script src="/app.js" ></script>
+
+<script src="firebase.js" ></script>
 </body>
 </html>
 

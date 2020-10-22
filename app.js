@@ -3,15 +3,48 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path'),
     multer = require('multer'),
-    firebase = require('firebase'),
     storage = require('@google-cloud/storage'),
+    firebase = require('firebase');
+    admin = require("firebase-admin");
     app = express();
+
+// admin.initializeApp({
+//     databaseURL:"https://ism-firebase-3cf58.firebaseio.com"
+// });
+// var firebaseConfig = {
+//     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
+//     authDomain: "ism-firebase-3cf58.firebaseapp.com",
+//     databaseURL: "https://ism-firebase-3cf58.firebaseio.com",
+//     projectId: "ism-firebase-3cf58",
+//     storageBucket: "ism-firebase-3cf58.appspot.com",
+//     messagingSenderId: "776971619952",
+//     appId: "1:776971619952:web:c62f86f396ede7da79eeb5"
+//   };
+
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
+
+
+
+// var db = admin.database();
+// var ref = db.ref("ism_data");
+// ref.on("value", function(snapshot) {
+//     console.log('entered')
+//     console.log(snapshot.val());
+//   }, function (errorObject) {
+//     console.log('entered here')
+
+//     console.log("The read failed: " + errorObject.code);
+//   });
+
 
 app.set('view engine','ejs');
 app.set("views", path.join(__dirname, "views"));
 app.use("/public", express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "views")));
+
+
 
 mongoose.connect('mongodb+srv://thesdtiwari:Saurabh100@cluster0.laykv.mongodb.net/ism-data?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true});
 
@@ -39,10 +72,6 @@ var dataSchema = mongoose.Schema({
 });
 
 var data = mongoose.model('ism_data',dataSchema);
-  
-data.find({},function(err,dats){
-    console.log(dats);
-})
 
 app.get('/',function(req,res){
     res.redirect('/index');  
@@ -54,29 +83,19 @@ app.get('/index',function(req,res){
     })  
 });
 
-app.get('/maharashtra',function(req,res){
+app.get('/index/:id',function(req,res){
+    var id = req.params.id;
     data.find({}, function(err, allCampgrounds){
-        res.render("maharashtra", {params :allCampgrounds}); 
+        res.render('all', {params :allCampgrounds, id : id}); 
     });
 })
-
-app.get('/mnc',function(req,res){
-    data.find({}, function(err, allCampgrounds){
-        res.render("mnc", {params :allCampgrounds}); 
-    });
-})
-
-app.get('/mailer_daemon',function(req,res){
-    data.find({}, function(err, allCampgrounds){
-        res.render("mailer_daemon", {params :allCampgrounds}); 
-    });
-})
-
+     
 app.get('/add',function(req,res){
     res.render("add");
 })
 
 app.post('/index', upload ,function(req,res){
+
     var name    = req.body.name,
         state   = req.body.state,
         place   = req.body.place,
@@ -109,6 +128,7 @@ app.post('/index', upload ,function(req,res){
             res.render("mnc", {params :allCampgrounds});
         });
     }
+console.log(name +" "+ place + " " + branch);
 
 });
 
