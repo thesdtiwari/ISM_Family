@@ -48,10 +48,11 @@ function submitForm(e){
    place = getInputVal('place');
    state = getInputVal('state');
    branch = getInputVal('branch');
+   club = getInputVal('club');
    intern  = getInputVal('intern');
    placed = getInputVal('placed');
    year = getInputVal('year');
-    
+    console.log(club);
 
     var newData = data.push()
     
@@ -64,7 +65,8 @@ function submitForm(e){
       intern:intern,
       placed:placed,
       year:year,
-      url : imgUrl
+      url : imgUrl,
+      club:club
     });
   }
 

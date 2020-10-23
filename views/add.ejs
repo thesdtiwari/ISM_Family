@@ -12,7 +12,7 @@
 
 </head>
 <body class="d-flex flex-column justify-content-center align-items-center ">
-    <form class="p-5 col-sm-9 col-lg-7 col-xl-5 d-flex flex-column justify-content-center " id="form"  action="/index" method="POST" enctype="multipart/form-data" style="background-color: lightblue;  overflow: hidden;">
+    <form class="p-5 col-sm-9 col-lg-7 col-xl-5 d-flex flex-column justify-content-center " id="form"  action="/index" method="POST" enctype="multipart/form-data" style="background-color: lightblue;  overflow: hidden;" onsubmit="alert('Your response has been submitted')" >
         <div class="m-2"  >
             Name <br>
             <input type="text" placeholder="Enter Name"  name="name" id="name" style="width: 100%;" required>
@@ -59,7 +59,7 @@
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">Branch</label>
             <select name="branch" id="branch" style="width: 100%;"  > 
-                <option value="Mathmatics and Computing ">Mathematics and Computing Engineering</option>
+                <option value="Mathematics and Computing ">Mathematics and Computing Engineering</option>
                 <option value="Computer Science Engineering">Computer Science Engineering</option>
                 <option value="Electronics and Communication ">Electronics and Communication Engineering</option>
                 <option value="Electrical Engineering">Electrical Engineering</option>
@@ -73,13 +73,15 @@
                 <option value="Environmental Engineering">Environmental Engineering</option>
                 <option value="Mineral Engineering">Mineral Engineering</option>
                 <option value="Applied Geology">Applied Geology</option>
+                <option value="Applied Geophysics">Applied Geophysics</option>
+
             </select>
         </div>
         <div class="form-group m-2">
             <label for="exampleFormControlSelect1">Clubs</label>
             <select name="club" id="club" style="width: 100%;"  > 
                 <option value="None">None</option>
-                <option value="ARCA">ARCA</option>
+                <option value="ARKA">ARKA</option>
                 <option value="E-Cell">E-Cell</option>
                 <option value="Cyber labs">Cyber labs</option>
                 <option value="RoboISM">RoboISM</option>
@@ -87,8 +89,15 @@
                 <option value="Udaan">Udaan</option>
                 <option value="LITC">LITC</option>
                 <option value="WTC">WTC</option>
+                <option value="ADC">ADC</option>
                 <option value="LITM">LITM</option>
-                <option value="LCI">LICI</option>
+                <option value="LCI">LCI</option>
+                <option value="AISEC">AISEC</option>
+                <option value="Chayanika">Chayanika</option>
+                <option value="Quiz Club">Quiz Club</option>
+                <option value="Artfreaks">Artfreaks</option>
+                <option value="Manthan">Manthan</option>
+                <option value="Fotofreaks">Fotofreaks</option>
             </select>
         </div>      
         <div class="m-2">
@@ -113,8 +122,13 @@
             <input type="file" name="image" id="image">
         </div> 
         <div >
-                <button class="btn btn-primary" style="width: 100%;" type="submit" >Submit</button>
+                <button class="btn btn-primary"  style="width: 100%;" type="submit">Submit</button></a>
         </div>
+        <script>
+            function myalert(){
+                alert("your response has been recorded")
+            }
+        </script>
     </form>    
 
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>

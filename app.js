@@ -110,6 +110,8 @@ app.get('/add',function(req,res){
 
 app.post('/index', upload ,function(req,res){
 
+
+
     var name    = req.body.name,
         state   = req.body.state,
         place   = req.body.place,
@@ -130,19 +132,18 @@ app.post('/index', upload ,function(req,res){
         placed : placed,
         image : image
     });
-    if(state == "Maharashtra"){
-        data.find({}, function(err, allCampgrounds){
-            console.log('Entered mh');
-            res.render("maharashtra", {params :allCampgrounds});
-        });
-    }
-    if(branch == "Mathmatics and Computing"){
-        data.find({}, function(err, allCampgrounds){
-            console.log('MnC');
-            res.render("mnc", {params :allCampgrounds});
-        });
-    }
-console.log(name +" "+ place + " " + branch);
+    // if(state == "Maharashtra"){
+    //     data.find({}, function(err, allCampgrounds){
+    //         console.log('Entered mh');
+    //         res.render("maharashtra", {params :allCampgrounds});
+    //     });
+    // }
+    // if(branch == "Mathmatics and Computing"){
+    //     data.find({}, function(err, allCampgrounds){
+    //         console.log('MnC');
+    //         res.render("mnc", {params :allCampgrounds});
+    //     });
+    // }
 
 });
 
