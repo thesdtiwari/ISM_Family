@@ -8,21 +8,21 @@ var express = require('express'),
     admin = require("firebase-admin");
     app = express();
 
-// admin.initializeApp({
-//     databaseURL:"https://ism-firebase-3cf58.firebaseio.com"
-// });
-// var firebaseConfig = {
-//     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
-//     authDomain: "ism-firebase-3cf58.firebaseapp.com",
-//     databaseURL: "https://ism-firebase-3cf58.firebaseio.com",
-//     projectId: "ism-firebase-3cf58",
-//     storageBucket: "ism-firebase-3cf58.appspot.com",
-//     messagingSenderId: "776971619952",
-//     appId: "1:776971619952:web:c62f86f396ede7da79eeb5"
-//   };
+admin.initializeApp({
+    databaseURL:"https://ism-firebase-3cf58.firebaseio.com"
+});
+var firebaseConfig = {
+    apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
+    authDomain: "ism-firebase-3cf58.firebaseapp.com",
+    databaseURL: "https://ism-firebase-3cf58.firebaseio.com",
+    projectId: "ism-firebase-3cf58",
+    storageBucket: "ism-firebase-3cf58.appspot.com",
+    messagingSenderId: "776971619952",
+    appId: "1:776971619952:web:c62f86f396ede7da79eeb5"
+  };
 
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
 
@@ -85,14 +85,28 @@ app.get('/index',function(req,res){
 
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
-    data.find({}, function(err, allCampgrounds){
-        res.render('all', {params :allCampgrounds, id : id}); 
-    });
+    
+     data.find({}, function(err, allCampgrounds){
+    
+         firebase.database().ref('ism_data').once('value').then(function(snapshot){
+            console.log('entered')
+            //console.log(snapshot.val())
+            //console.log(allCampgrounds);
+            dataFire = snapshot.val();
+            //console.log(dataFire)
+            res.render('all', {params :allCampgrounds , id : id,firebase:dataFire}); 
+    
+        }) 
+         
+     });
+   
+    
 })
      
 app.get('/add',function(req,res){
     res.render("add");
 })
+
 
 app.post('/index', upload ,function(req,res){
 
@@ -132,6 +146,11 @@ console.log(name +" "+ place + " " + branch);
 
 });
 
+
+// firebase.database().ref('ism_data').once('value').then(function(snapshot){
+//     console.log('firebase data')
+//     console.log(snapshot.val())
+// })
 
 var port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on:`, port));

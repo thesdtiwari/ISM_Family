@@ -1,4 +1,4 @@
-
+alert('xhgb')
 var firebaseConfig = {
     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
     authDomain: "ism-firebase-3cf58.firebaseapp.com",
@@ -23,8 +23,25 @@ function getInputVal(id){
   return document.getElementById(id).value;
 }
 
+// Variables daclaration
+var name,place,state,branch,intern,placed,year,imgUrl;
 
-var name,place,state,branch,intern,placed,year;
+document.getElementById('image').addEventListener("change", function(e) {
+  e.preventDefault();
+  var name = getInputVal('name');
+  var place = getInputVal('place');
+  var branch = getInputVal('branch');
+  var  imageFile = e.target.files[0];
+  let storageRef = firebase.storage().ref(name + '_'+place + '_'+branch);
+  storageRef.put(imageFile).then(function(snapshot){
+    storageRef.getDownloadURL().then(function(url){
+      imgUrl = url;
+      console.log(imgUrl + ' is the url');
+    })
+  });  
+})  
+
+// Variables initialization
 function submitForm(e){
     e.preventDefault();
    name   = getInputVal('name');
@@ -46,18 +63,17 @@ function submitForm(e){
       club:club,
       intern:intern,
       placed:placed,
-      year:year
+      year:year,
+      url : imgUrl
     });
   }
 
-  document.getElementById('image').addEventListener("change", function(e) {
-    var name = getInputVal('name');
-    var place = getInputVal('place');
-    var branch = getInputVal('branch');
-    var  imageFile = e.target.files[0];
-    let storageRef = firebase.storage().ref(name + '_'+place + '_'+branch);
-    storageRef.put(imageFile);  
-  })  
+ 
+
+  //console.log(imgUrl + ' checking')
   
  
 
+
+var storageRef = firebase.storage().ref();
+var spaceRef = storageRef.child();

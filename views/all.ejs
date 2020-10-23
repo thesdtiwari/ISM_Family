@@ -239,7 +239,25 @@
                                 </div>
                             <% } %>
                         <% }) %>
-                     
+                        <% var key = Object.keys(firebase); %>
+                        <%for(var i = 0; i<key.length; i++){ %>
+                            
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <div class="img-container">
+                                        <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body ">
+                                        <p class="card-text">
+                                            <div><%= firebase[key[i]].name %></div>
+                                            <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                            <div><%= firebase[key[i]].branch %> </div>
+                                        </p>
+                                        <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
+
+                                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                                <% console.log(firebase[key[i]].name) %>    
+                        <%}%>
                 </div>  
             </div>
         </div>
@@ -266,6 +284,19 @@
         Others
     </div>
 </div>
+ 
+
+
+
+<% var key = Object.keys(firebase); %>
+<%for(var i = 0; i<key.length; i++){ %>
+    
+    <%= firebase[key[i]].name %>
+<%}%>
+
+
+<img src="gs://ism-firebase-3cf58.appspot.com/Beena Tiwari_Durgapur _Mining Engineering" alt="searching">
+
 
 <script type="text/javascript"  src="/main.js"></script>
 
