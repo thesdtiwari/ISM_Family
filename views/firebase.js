@@ -1,4 +1,4 @@
-alert('xhgb')
+alert('Welcome')
 var firebaseConfig = {
     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
     authDomain: "ism-firebase-3cf58.firebaseapp.com",
