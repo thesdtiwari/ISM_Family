@@ -85,11 +85,12 @@ app.get('/index',function(req,res){
 
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
+    //console.log(id);
     
      data.find({}, function(err, allCampgrounds){
     
          firebase.database().ref('ism_data').once('value').then(function(snapshot){
-            console.log('entered')
+        
             //console.log(snapshot.val())
             //console.log(allCampgrounds);
             dataFire = snapshot.val();
