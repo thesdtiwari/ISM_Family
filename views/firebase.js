@@ -33,12 +33,33 @@ document.getElementById('image').addEventListener("change", function(e) {
   var branch = getInputVal('branch');
   var  imageFile = e.target.files[0];
   let storageRef = firebase.storage().ref(name + '_'+place + '_'+branch);
-  storageRef.put(imageFile).then(function(snapshot){
+  var uploadTask = storageRef.put(imageFile);
+
+  uploadTask.on('state_changed',function(snapshot){
+    console.log('entered progress')
+    var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+    console.log(progress);
+    document.getElementById('progress').innerHTML = 'Uploading ' + Math.round(progress) +'%' ;
+    if(progress == 100){
+    document.getElementById('progress').innerHTML = 'Click on Submit' ;
+
+    }
+
+  })
+  
+  uploadTask.then(function(snapshot){
+    console.log('entered')
+    
     storageRef.getDownloadURL().then(function(url){
+      console.log('entered url')
+
       imgUrl = url;
       console.log(imgUrl + ' is the url');
     })
   });  
+
+  
+  
 })  
 
 // Variables initialization
@@ -68,14 +89,4 @@ function submitForm(e){
       url : imgUrl,
       club:club
     });
-  }
-
- 
-
-  //console.log(imgUrl + ' checking')
-  
- 
-
-
-var storageRef = firebase.storage().ref();
-var spaceRef = storageRef.child();
+}
