@@ -19,8 +19,12 @@ document.querySelector('#members').addEventListener('click',function(){
 });
 
 document.querySelector('#events-Btn').addEventListener('click',function(){
+
     events();
     
+});
+document.querySelector('#button').addEventListener('click',function(){
+    events();    
 });
 
 

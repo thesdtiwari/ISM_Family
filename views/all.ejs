@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://use.fontawesome.com/1b07b30564.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= id %>_Family</title>
@@ -11,51 +12,200 @@
     <link rel="stylesheet" type="text/css" href="/main.css">    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
-    
-            <a class=" btn-outline-success mr-2" href="/index">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
-                <div class="btn-group mr-2">
-                    <button type="button" class="btn  dropdown-toggle btn-outline-success " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Members
-                    </button>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#batch-2021-vis" id="batch-2021-nav">2016_Batch</a>
-                    <a class="dropdown-item" href="#batch-2022-vis" id="batch-2022-nav">2017_Batch</a>
-                    <a class="dropdown-item" href="#batch-2023-vis" id="batch-2023-nav">2018_Batch</a>
-                    <a class="dropdown-item" href="#batch-2024-vis" id="batch-2024-nav">2019_Batch</a>
-                    </div>
-                </div>
-    
-                <div class="btn-group mr-2">
-                    <button type="button" class="btn btn-outline-success " id="button">Events</button>
-                </div>
-    
-                <form class="form-inline my-2 my-lg-0  ml-auto  ">
-                    <button class="btn btn-outline-success my-2 my-sm-0" ><a href="/add" > Add</a></button> 
-                </form>
-                
-            </div>
-    </nav>
 
-<% if (id  == 'maharashtra') { %>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+
+        <a class=" btn-outline-success mr-2" href="">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <div class="btn-group mr-2">
+                <button type="button" class="btn  dropdown-toggle btn-outline-success " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Members
+                </button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#batch-2021-vis" id="batch-2021-nav">2016_Batch</a>
+                <a class="dropdown-item" href="#batch-2022-vis" id="batch-2022-nav">2017_Batch</a>
+                <a class="dropdown-item" href="#batch-2023-vis" id="batch-2023-nav">2018_Batch</a>
+                <a class="dropdown-item" href="#batch-2024-vis" id="batch-2024-nav">2019_Batch</a>
+                </div>
+            </div>
+
+            <div class="btn-group mr-2">
+                <button type="button" class="btn btn-outline-success " href="#" id="button">Events</button>
+            </div>
+
+            <form class="form-inline my-2 my-lg-0  ml-auto  ">
+                <button class="btn btn-outline-success my-2 my-sm-0" ><a href="/add" > Add</a></button> 
+            </form>
+            
+        </div>
+</nav>
+
+<div id="intro_image">  
+<div id="statesImage" >
+<% if (id  == 'Maharashtra') { %>
     <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.indianexpress.com/2020/07/ganesh1.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
     </div>
 <%} else if (id == 'Uttar Pradesh') { %>
     <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpapercave.com/wp/wp6016809.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
-<%} else if (id == 'bihar') { %>
+<%} else if (id == 'Bihar') { %>
     <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
     </div>
-<%} else if (id == 'mnc') { %>
-    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://ecms.adelaide.edu.au/sites/default/files/styles/ua_landscape/public/pure-maths-900px.jpg?itok=56ENjKEx);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " >
+<%} else if (id == 'Chhatisgarh') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
     </div>
-<%} else if (id == 'mailer_daemon') { %>
+<%} else if (id == 'Jharkhand') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Haryana') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Telangana') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Gujrat') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Andhra Pradesh') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Rajasthan') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Delhi') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Punjab') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Madhya Pradesh') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Karnataka') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Himachal Pradesh') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Odisha') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Tamil Nadu') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Uttarakhand') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Kerala') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Assam') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Bengal') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Jammu and Kashmir') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Arunachal Pradesh') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+<%} else if (id == 'Goa') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/Sunset_view_of_Ganga_Ghat.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    </div>
+</div>
+
+<div id="branchesImage">
+<%} else if (id == 'Mathematics and Computing') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://ecms.adelaide.edu.au/sites/default/files/styles/ua_landscape/public/pure-maths-900px.jpg?itok=56ENjKEx);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Computer Science') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/08/computer-science-header-1-752x347.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Electronics and Communication') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpapercave.com/wp/wp3686758.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Electrical Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Mining Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.unsplash.com/photo-1587919968590-fbc98cea6c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Petroleum Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpapercave.com/wp/wp2450495.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Chemical Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://assets.new.siemens.com/siemens/assets/api/uuid:bcce547f-cb07-403d-be08-2808c066cf3a/width:1125/quality:high/oil-refinery-chemical-annd-petrochemical-plant.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Mining Machinery') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://cdn.hipwallpaper.com/i/19/38/ixJqrD.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Civil Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.pexels.com/photos/2138126/pexels-photo-2138126.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Mechanical Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Engineering Physics') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://image.freepik.com/free-vector/chalkboard-with-science-physics-formulas-background_97886-4558.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Environmental Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://744025.smushcdn.com/1245953/wp-content/uploads/2019/05/jason-blackeye-OyhwA8FX8Cw-unsplash.jpg?lossy=1&strip=1&webp=1);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Mineral Engineering') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.gres.com.au/theme/grescomau/assets/public/Image/home/featured/aboutgrs-1.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Applied Geology') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://744025.smushcdn.com/1245953/wp-content/uploads/2019/05/christopher-burns-C1J_eSGNPt0-unsplash.jpg?lossy=1&strip=1&webp=1);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+<%} else if (id == 'Applied Geophysics') { %>
+<div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://erdw.ethz.ch/en/studies/master/applied-geophysics/_jcr_content/par/fullwidthimage/image.imageformat.fullwidth.1056720462.jpg);    height: 50vh; object-fit: stretch; height: 98vh; background-size: cover; " ></div>
+</div>
+
+<div id="clubsImage">
+<%} else if (id == 'ARKA') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://i.pinimg.com/originals/e1/87/0c/e1870cfee5e05fe14712c92ae9bbadeb.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'E-Cell') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://static.timesofisrael.com/www/uploads/2018/09/iStock-808337406.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Cyber labs') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://blog.radware.com/wp-content/uploads/2018/11/AdobeStock_215123311-1.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'RoboISM') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpoper.com/images/00/29/72/26/robots-3d_00297226.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Mailer Daemon') { %>
     <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://cdn.searchenginejournal.com/wp-content/uploads/2019/09/647e8cc9-69cd-4fcf-bed8-2ccba7931ef7.jpeg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Udaan') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://studyrama-budget.com/wp-content/uploads/2018/11/Great-Careers.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'LITM') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://i.pinimg.com/originals/93/40/1a/93401aa30edaf0047548756c87c85092.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Artfreaks') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpapercave.com/wp/wp2446685.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Manthan') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://theartmad.com/wp-content/uploads/2015/08/Music-Wallpaper-1.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Fotofreaks') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://c1.wallpaperflare.com/preview/25/513/175/people-camera-people-technology.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Sports') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://cdn.hipwallpaper.com/i/17/18/tBm1SI.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Black Knight chess club') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://i.pinimg.com/originals/b0/f7/45/b0f745906959b60ccd4c994b10f7aa5a.png);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'FFI') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://c.files.bbci.co.uk/182FF/production/_107317099_blooddonor976.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'AISEC') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.standard.com/sites/default/files/styles/newsletter_hero/public/05.SalesIdea_December2019_ForeignNationals.jpg?itok=vtcUvrpr);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'LCI') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://jenjon.in/wp-content/uploads/2015/08/pegasus_LARGE_t_1581_106603064.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'ADC') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.nationaloperahouse.ie/images/made/images/pages/wdf_2020_banner_1056_575_85_c1_center_center.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'WTC') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpaperdj.com/wallpapers/_between_the_rays-1920x1080.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'LITC') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://static.wixstatic.com/media/7fe4e3_bcb3ec64573c4e3b88f198ededce9b45~mv2.jpg/v1/fill/w_1000,h_500,al_c,q_90,usm_0.66_1.00_0.01/7fe4e3_bcb3ec64573c4e3b88f198ededce9b45~mv2.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Quiz Club') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.elegantthemes.com/blog/wp-content/uploads/2019/04/buzzfeed-quiz.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div> 
+<%} else if (id == 'Toastmaster') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://i2.wp.com/discovermni.com/wp-content/uploads/2020/01/toastmasters.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Rythm') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://thewellspring.org/wp-content/uploads/2013/09/265116-art-of-living-course.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Kartavya') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://s4.scoopwhoop.com/anj/df/b6bb3c41-c480-4450-aaa8-c61c65e99a0c.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+<%} else if (id == 'Chayanika') { %>
+    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://www.wallpapertip.com/wmimgs/62-627360_hindi-sad-love-romantic-shayari-photo-wallpaper-pictures.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
+
+
+</div>
+</div>
+
 <% } %> 
 
 <ul class="nav nav-tabs  " >
@@ -67,6 +217,9 @@
     </li>
 </ul>
 
+
+<% var key = Object.keys(firebase); %>
+
 <div id="batches">
     <div class="dropdown" id="batch2021">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;">2016-Batch</div>
@@ -77,24 +230,24 @@
             <div class="container d-flex justify-content-around flex-column">
                 <div class="row justify-content-around ">    
                                                   
-                    <% params.forEach(function(sdt){ %>  
-                        <% if(sdt.year == 2016 &&( sdt.branch == id || sdt.state == id || sdt.club == id )){ %>
+                    <%for(var i = 0; i<key.length; i++){ %>
+                        <% if(firebase[key[i]].year == 2016 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                             <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                 <div class="img-container">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body ">
                                     <p class="card-text">
-                                        <div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div>
+                                        <div><%= firebase[key[i]].name %></div>
+                                        <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                        <div><%= firebase[key[i]].branch %> </div>
                                     </p>
-                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
+                                    <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
                             </div>
-                        <% } %>
-                    <% }) %>
+                            <% } %>
+                    <%}%>
 
                 </div>  
             </div>
@@ -110,24 +263,24 @@
                 <div class="row justify-content-around">    
                         
                            
-                    <% params.forEach(function(sdt){ %>  
-                        <% if(sdt.year == 2017 && ( sdt.branch == id || sdt.state == id || sdt.club == id )){ %>
+                    <%for(var i = 0; i<key.length; i++){ %>
+                        <% if(firebase[key[i]].year == 2017 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                             <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                 <div class="img-container">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body ">
                                     <p class="card-text">
-                                        <div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div>
+                                        <div><%= firebase[key[i]].name %></div>
+                                        <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                        <div><%= firebase[key[i]].branch %> </div>
                                     </p>
-                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
+                                    <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
                             </div>
-                        <% } %>
-                    <% }) %>
+                            <% } %>
+                    <%}%>
                         
                         
                 </div>  
@@ -143,24 +296,24 @@
             <div class="container d-flex justify-content-around flex-column">
                 <div class="row justify-content-around">    
 
-                    <% params.forEach(function(sdt){ %>  
-                        <% if(sdt.year == 2018 && ( sdt.branch == id || sdt.state == id || sdt.club == id )){ %>
+                    <%for(var i = 0; i<key.length; i++){ %>
+                        <% if(firebase[key[i]].year == 2018 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                             <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                 <div class="img-container">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
+                                    <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body ">
                                     <p class="card-text">
-                                        <div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div>
+                                        <div><%= firebase[key[i]].name %></div>
+                                        <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                        <div><%= firebase[key[i]].branch %> </div>
                                     </p>
-                                    <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
+                                    <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
 
                                     <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
                             </div>
-                        <% } %>
-                    <% }) %>
+                            <% } %>
+                    <%}%>
 
                 </div>  
             </div>
@@ -175,28 +328,6 @@
             <div class="container d-flex   flex-column">  
                 <div class="row justify-content-around">    
                     
- 
-
-                      
-                       <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2019 && ( sdt.branch == id || sdt.state == id || sdt.club == id )){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                                    <div class="img-container">
-                                        <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body ">
-                                        <p class="card-text">
-                                            <div><%= sdt.name %></div>
-                                            <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                            <div><%= sdt.branch %> </div>
-                                        </p>
-                                        <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %></div> </div>
-
-                                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
-                        <% var key = Object.keys(firebase); %>
                         <%for(var i = 0; i<key.length; i++){ %>
                             <% if(firebase[key[i]].year == 2019 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                                 <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
@@ -214,7 +345,6 @@
                                         <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
                                 </div>
                                 <% } %>
-                              
                         <%}%>
                 </div>  
             </div>
@@ -223,7 +353,8 @@
 </div>
 
 <div id="events" class="d-none" >
-    <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="freshers-2018">
+    To add images and videos of events happened in this state/branch/club contact Saurabh Tiwari
+    <!-- <div  class=" d-flex flex-column align-items-center m-3 mb-4" id="freshers-2018">
         <img src="public/IMG_20201008_214032.jpg" class="img-fluid m-3" alt="Responsive image">
         General meetup
     </div>
@@ -237,12 +368,20 @@
         <video width="400" controls>
             <source src="public/VID-20201008-WA0045.mp4" type="video/mp4">
         </video>
-
-
         Others
-    </div>
+    </div> -->
 </div>
- 
+
+
+<span class="d-flex justify-content-center " style="font-size:x-large;">
+    &COPY; Saurabh Tiwari
+</span> 
+<span class="d-flex justify-content-center mb-4" >
+    <a href="https://www.facebook.com/profile.php?id=100040826810733"><i class="fa fa-facebook-square m-2 mt-auto" style="font-size: 40px; color: rgb(	66, 103, 178);" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/thesdtiwari/"><i class="fa fa-instagram m-2 mt-auto" style="font-size: 40px; color: rgb(225,48,108);" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/in/thesdtiwari/"><i class="fa fa-linkedin-square m-2 mt-auto" style="font-size: 40px; color: rgb(14,118,168);" aria-hidden="true"></i></a>
+</span> 
+
 <script type="text/javascript"  src="/main.js"></script>
 
 </body>

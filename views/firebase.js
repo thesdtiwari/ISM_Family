@@ -39,7 +39,7 @@ document.getElementById('image').addEventListener("change", function(e) {
     console.log('entered progress')
     var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     console.log(progress);
-    document.getElementById('progress').innerHTML = 'Uploading ' + Math.round(progress) +'%' ;
+    document.getElementById('progress').innerHTML = 'Wait, Uploading ' + Math.round(progress) +'% done' ;
     if(progress == 100){
     document.getElementById('progress').innerHTML = 'Click on Submit' ;
 

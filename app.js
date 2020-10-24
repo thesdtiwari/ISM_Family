@@ -108,6 +108,16 @@ app.get('/add',function(req,res){
     res.render("add");
 })
 
+app.get('/mnc',function(req,res){
+    data.find({}, function(err, allCampgrounds){
+        res.render("mnc", {params :allCampgrounds});
+    });
+})
+
+app.get('/maharashtra',function(req,res){
+    res.render("maharashtra");
+})
+
 
 app.post('/index', upload ,function(req,res){
 

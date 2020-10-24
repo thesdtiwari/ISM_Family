@@ -58,10 +58,10 @@
 </nav>
 
 <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.indianexpress.com/2020/07/ganesh1.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
-        <!-- <div class="container text-center">
+         <div class="container text-center">
           <h1 class="display-4"  style="color: brown; font-weight: 900; ">MAH_Family</h1>
           <p class="lead  " style="color: white; font-weight: 900; "  >Jai Maharashtra</p>
-        </div> -->
+        </div>
 </div>
 
 <ul class="nav nav-tabs  " >
@@ -102,27 +102,7 @@
                                 <div>Mathmatics and Computing</div></p>
                                 </div>
                             </div>
-                          
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2016 && sdt.state == "Maharashtra"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
-
-                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
-                        
-                  
-                   
-                        
+    
                         
                 </div>  
             </div>
@@ -178,23 +158,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2017 && sdt.state == "Maharashtra"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br> Placed : <%= sdt.placed %> </div>
-
-                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
-                        
+                    
                         
                 </div>  
             </div>
@@ -250,24 +214,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
-                        <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2018 && sdt.state == "Maharashtra"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %> <br>Placed : <%= sdt.placed %> </div>
-
-                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                </div>
-                            <% } %>
-                        <% }) %>
-                        
-                        
+                 
                 </div>  
             </div>
         </div>
@@ -683,28 +630,7 @@
                                 <div>Petroleum Engineering </div></p>
                             </div>
                              <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
-
-
-                      
-                       <% params.forEach(function(sdt){ %>  
-                            <% if(sdt.year == 2019 && sdt.state == "Maharashtra"){ %>
-                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                                    <img src="/<%= sdt.image %>" class="card-img-top" alt="...">
-                                    <div class="card-body ">
-                                    <p class="card-text"><div><%= sdt.name %></div>
-                                        <div><%= sdt.place %> , <%= sdt.state %>< </div>
-                                        <div><%= sdt.branch %> </div></p>
-                                    </div>
-                                    <br>
-                                     <div class="intern">Intern : <%= sdt.intern %><br>Placed : <%= sdt.placed %> </div>
-
-                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                                    <%= sdt.placed %>
-                                </div>
-                            <% } %>
-                        <% }) %>
-                        
+                        </div> 
                     </div> 
 
                    
@@ -760,18 +686,3 @@
 
 
 
-<!-- var storageRef = firebase.storage().ref('public/' + imageName );
-var uploadTask = storageRef.put(image);
-
-uploadTask.on('state_changed',function(snapshot){
-    var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-    console.log(progress);
-    },
-function(error){
-    console.log(error.message)
-    },
-function(){
-    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-        console.log(downloadURL);
-    })
-}) -->
