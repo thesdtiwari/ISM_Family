@@ -174,50 +174,7 @@
             <div class="batch-name">2019-Batch</div> 
             <div class="container d-flex   flex-column">  
                 <div class="row justify-content-around">    
-                    <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                        <div class="img-container">
-                            <img src="/public/IMG_20201008_213211.jpg" class="card-img-top" alt="...">
-                        </div>
-                        
-                        <div class="card-body ">
-                            <p class="card-text">
-                                <div>Saurabh Tiwari</div>
-                                <div>Mumbai,Maharashtra</div>
-                                <div>Mathmatics and Computing</div>
-                            </p>
-                            <div class="intern">Intern :Skillovate<br>Placed : Amazon</div>
-                        </div>
-                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                    </div>
                     
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200909_142344.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <p class="card-text"><div>Priyansh Sharma</div>
-                                <div>Mumbai,Maharashtra</div>
-                                <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
-                        
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200909_142631.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <p class="card-text"><div>Yash Meshram</div>
-                                <div>Nagpur,Maharashtra</div>
-                                <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
-                        <div class="card m-3" onclick="this.classList.toggle('expanded')" style="width: 18rem;">
-                            <img src="/public/IMG_20200911_133657.jpg" class="card-img-top" alt="...">
-                            <div class="card-body ">
-                            <p class="card-text"><div>Ishal Garg</div>
-                            <div>Pune,Maharashtra</div>
-                            <div>Mathmatics and Computing</div></p>
-                            </div>
-                             <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
-                        </div>
  
 
                       
@@ -241,7 +198,7 @@
                         <% }) %>
                         <% var key = Object.keys(firebase); %>
                         <%for(var i = 0; i<key.length; i++){ %>
-                            
+                            <% if(firebase[key[i]].year == 2019 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                                 <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                     <div class="img-container">
                                         <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
@@ -256,6 +213,7 @@
 
                                         <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
                                 </div>
+                                <% } %>
                               
                         <%}%>
                 </div>  

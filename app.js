@@ -85,7 +85,7 @@ app.get('/index',function(req,res){
 
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
-    //console.log(id);
+    console.log(id);
     
      data.find({}, function(err, allCampgrounds){
     
