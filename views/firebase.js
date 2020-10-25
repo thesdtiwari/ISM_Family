@@ -89,4 +89,5 @@ function submitForm(e){
       url : imgUrl,
       club:club
     });
+
 }
