@@ -1,4 +1,4 @@
-
+alert('sdt');
 var events = function(params) {
     document.querySelector('#batches').classList.add("d-none") ;
     document.querySelector('#events').classList.remove("d-none") ;
