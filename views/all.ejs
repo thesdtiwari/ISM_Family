@@ -28,6 +28,7 @@
                 Members
                 </button>
                 <div class="dropdown-menu">
+                <a class="dropdown-item" href="#batch-2020-vis" id="batch-2020-nav">2015_Batch</a>
                 <a class="dropdown-item" href="#batch-2021-vis" id="batch-2021-nav">2016_Batch</a>
                 <a class="dropdown-item" href="#batch-2022-vis" id="batch-2022-nav">2017_Batch</a>
                 <a class="dropdown-item" href="#batch-2023-vis" id="batch-2023-nav">2018_Batch</a>
@@ -49,7 +50,8 @@
 <div id="intro_image">  
 <div id="statesImage" >
 <% if (id  == 'Maharashtra') { %>
-    <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://images.indianexpress.com/2020/07/ganesh1.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " >
+    <div class="jumbotron jumbotron-fluid img-responsive" id="home" style="background-size: cover; object-fit: stretch" >
+        <img src="https://images.indianexpress.com/2020/07/ganesh1.jpg" class="img-responsive">
     </div>
 <%} else if (id == 'Uttar Pradesh') { %>
     <div class="jumbotron jumbotron-fluid " id="home" style="background-image: url(https://wallpapercave.com/wp/wp6016809.jpg);    height: 50vh; object-fit: stretch; height: 100vh; background-size: cover; " ></div>
@@ -221,6 +223,41 @@
 <% var key = Object.keys(firebase); %>
 
 <div id="batches">
+    <div class="dropdown" id="batch2020">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;">2015-Batch</div>
+    </div>
+    <div class="d-none" id="batch-2020-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2015 -Batch</div> 
+            <div class="container d-flex justify-content-around flex-column">
+                <div class="row justify-content-around ">    
+                                                  
+                    <%for(var i = 0; i<key.length; i++){ %>
+                        <% if(firebase[key[i]].year == 2015 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
+                            <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                <div class="img-container">
+                                    <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-text">
+                                        <div><%= firebase[key[i]].name %></div>
+                                        <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                        <div><%= firebase[key[i]].branch %> </div>
+                                    </p>
+                                    <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
+
+                                    <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                            </div>
+                            <% } %>
+                    <%}%>
+
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="dropdown" id="batch2021">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;">2016-Batch</div>
     </div>
@@ -253,6 +290,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="dropdown" id="batch2022">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2017-Batch</div>
     </div>
@@ -287,6 +326,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="dropdown" id="batch2023">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2018-Batch</div>
     </div>
@@ -319,6 +360,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="dropdown" id="batch2024">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2019-Batch</div>
     </div>
@@ -371,6 +414,12 @@
         Others
     </div> -->
 </div>
+
+<!-- <%for(var i = 0; i<key.length; i++){ %>
+    <% if(firebase[key[i]].branch == 'Mineral Engineering' ){ %>
+        <% console.log(firebase[key[i]].name) %> 
+    <% } %>
+<%}%> -->
 
 
 <span class="d-flex justify-content-center " style="font-size:x-large;">

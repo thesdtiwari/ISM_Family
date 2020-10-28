@@ -1,10 +1,10 @@
-alert('sdt');
 var events = function(params) {
     document.querySelector('#batches').classList.add("d-none") ;
     document.querySelector('#events').classList.remove("d-none") ;
     document.querySelector('#event-active').classList.add('active');
     document.querySelector('#member-active').classList.remove('active');
 };
+
 var members = function(params) {
     document.querySelector('#batches').classList.remove("d-none") ;
     document.querySelector('#events').classList.add("d-none") ;
@@ -15,27 +15,38 @@ var members = function(params) {
 
 document.querySelector('#members').addEventListener('click',function(){
     members();
-    
 });
 
 document.querySelector('#events-Btn').addEventListener('click',function(){
-
     events();
     
 });
+
 document.querySelector('#button').addEventListener('click',function(){
     events();    
+});
+
+document.querySelector('#batch2020').addEventListener('click',function(){
+    document.querySelector('#batch-2020-vis').classList.toggle("d-none") ;   
+});
+
+document.querySelector('#batch-2020-nav').addEventListener('click',function(){
+    document.querySelector('#batch-2020-vis').classList.remove("d-none") ;
+    members();
+    
 });
 
 
 document.querySelector('#batch2021').addEventListener('click',function(){
     document.querySelector('#batch-2021-vis').classList.toggle("d-none") ;   
 });
+
 document.querySelector('#batch-2021-nav').addEventListener('click',function(){
     document.querySelector('#batch-2021-vis').classList.remove("d-none") ;
     members();
     
 });
+
 document.querySelector('#batch2022').addEventListener('click',function(){
     document.querySelector('#batch-2022-vis').classList.toggle("d-none") ;
     
