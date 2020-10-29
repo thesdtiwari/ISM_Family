@@ -74,24 +74,22 @@ document.querySelector('#batch-2024-nav').addEventListener('click',function(){
     members();
 });
 
-document.querySelector('#freshers-2018-nav').addEventListener('click',function(){
-    events();
-});
-document.querySelector('#holi-2019-nav').addEventListener('click',function(){
-    events();
-});
-document.querySelector('#ganesh-chaturthi-2019-nav').addEventListener('click',function(){
-    events();
-});
-document.querySelector('#freshers-2019-nav').addEventListener('click',function(){
-    events();
-});
-document.querySelector('#holi-2020-nav').addEventListener('click',function(){
-    events();
-});
-document.querySelector('#others-nav').addEventListener('click',function(){
-    events();
-});
+
+// document.querySelector('#holi-2019-nav').addEventListener('click',function(){
+//     events();
+// });
+// document.querySelector('#ganesh-chaturthi-2019-nav').addEventListener('click',function(){
+//     events();
+// });
+// document.querySelector('#freshers-2019-nav').addEventListener('click',function(){
+//     events();
+// });
+// document.querySelector('#holi-2020-nav').addEventListener('click',function(){
+//     events();
+// });
+// document.querySelector('#others-nav').addEventListener('click',function(){
+//     events();
+// });
 
 
 

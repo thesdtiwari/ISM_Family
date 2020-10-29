@@ -4,8 +4,8 @@ var express = require('express'),
     path = require('path'),
     multer = require('multer'),
     storage = require('@google-cloud/storage'),
-    firebase = require('firebase');
-    admin = require("firebase-admin");
+    firebase = require('firebase'),
+    admin = require("firebase-admin"),
     app = express();
 
 admin.initializeApp({
@@ -86,21 +86,22 @@ app.get('/index',function(req,res){
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
     console.log(id);
-    
-     data.find({}, function(err, allCampgrounds){
-    
-         firebase.database().ref('ism_data').once('value').then(function(snapshot){
-        
-            //console.log(snapshot.val())
-            //console.log(allCampgrounds);
-            dataFire = snapshot.val();
-            //console.log(dataFire)
-            res.render('all', {params :allCampgrounds , id : id,firebase:dataFire}); 
-    
-        }) 
-         
-     });
    
+    
+    data.find({}, function(err, allCampgrounds){
+
+        firebase.database().ref('ism_data').once('value').then(function(snapshot){
+    
+        //console.log(snapshot.val())
+        //console.log(allCampgrounds);
+        dataFire = snapshot.val();
+        //console.log(dataFire)
+        res.render('all', {params :allCampgrounds , id : id,firebase:dataFire}); 
+
+    }) 
+        
+    });
+
     
 })
      
