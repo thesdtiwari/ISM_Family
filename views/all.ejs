@@ -32,6 +32,7 @@
                 <a class="dropdown-item" href="#batch-2022-vis" id="batch-2022-nav">2017_Batch</a>
                 <a class="dropdown-item" href="#batch-2023-vis" id="batch-2023-nav">2018_Batch</a>
                 <a class="dropdown-item" href="#batch-2024-vis" id="batch-2024-nav">2019_Batch</a>
+                <a class="dropdown-item" href="#batch-2025-vis" id="batch-2025-nav">2020_Batch</a>
                 </div>
             </div>
 
@@ -373,6 +374,37 @@
                     
                         <%for(var i = 0; i<key.length; i++){ %>
                             <% if(firebase[key[i]].year == 2019 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <div class="img-container">
+                                        <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body ">
+                                        <p class="card-text">
+                                            <div><%= firebase[key[i]].name %></div>
+                                            <div><%= firebase[key[i]].place %> , <%= firebase[key[i]].state %>< </div>
+                                            <div><%= firebase[key[i]].branch %> </div>
+                                        </p>
+                                        <div class="intern">Intern : <%= firebase[key[i]].intern %><br>Placed : <%= firebase[key[i]].placed %></div> </div>
+
+                                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                                <% } %>
+                        <%}%>
+                </div>  
+            </div>
+        </div>
+    </div>  
+    <div class="dropdown" id="batch2025">
+        <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2020-Batch</div>
+    </div>
+    <div class="" id="batch-2025-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">2020-Batch</div> 
+            <div class="container d-flex   flex-column">  
+                <div class="row justify-content-around">    
+                    
+                        <%for(var i = 0; i<key.length; i++){ %>
+                            <% if(firebase[key[i]].year == 2020 && ( firebase[key[i]].branch == id || firebase[key[i]].state == id || firebase[key[i]].club == id )){ %>
                                 <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
                                     <div class="img-container">
                                         <img src="<%= firebase[key[i]].url %>" class="card-img-top" alt="...">

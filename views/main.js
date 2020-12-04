@@ -74,6 +74,15 @@ document.querySelector('#batch-2024-nav').addEventListener('click',function(){
     members();
 });
 
+document.querySelector('#batch2025').addEventListener('click',function(){
+    document.querySelector('#batch-2025-vis').classList.toggle("d-none") ;
+    
+});
+document.querySelector('#batch-2025-nav').addEventListener('click',function(){
+    document.querySelector('#batch-2025-vis').classList.remove("d-none") ;
+    members();
+});
+
 
 // document.querySelector('#holi-2019-nav').addEventListener('click',function(){
 //     events();
