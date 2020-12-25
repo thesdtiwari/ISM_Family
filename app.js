@@ -11,6 +11,7 @@ var express = require('express'),
 admin.initializeApp({
     databaseURL:"https://ism-firebase-3cf58.firebaseio.com"
 });
+
 var firebaseConfig = {
     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
     authDomain: "ism-firebase-3cf58.firebaseapp.com",
@@ -19,7 +20,7 @@ var firebaseConfig = {
     storageBucket: "ism-firebase-3cf58.appspot.com",
     messagingSenderId: "776971619952",
     appId: "1:776971619952:web:c62f86f396ede7da79eeb5"
-  };
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -83,6 +84,12 @@ app.get('/index',function(req,res){
     })  
 });
 
+app.get('/index.ejs',function(req,res){
+    data.find({}, function(err, allCampgrounds){
+        res.render("index", {params :allCampgrounds});
+    })  
+});
+
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
     console.log(id);
@@ -96,8 +103,7 @@ app.get('/index/:id',function(req,res){
         //console.log(allCampgrounds);
         dataFire = snapshot.val();
         //console.log(dataFire)
-        res.render('all', {params :allCampgrounds , id : id,firebase:dataFire}); 
-
+        res.render('all', {params : allCampgrounds , id : id, firebase : dataFire}); 
     }) 
         
     });
