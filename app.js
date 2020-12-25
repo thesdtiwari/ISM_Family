@@ -8,6 +8,15 @@ var express = require('express'),
     admin = require("firebase-admin"),
     app = express();
 
+
+
+
+
+
+
+
+
+    
 admin.initializeApp({
     databaseURL:"https://ism-firebase-3cf58.firebaseio.com"
 });
