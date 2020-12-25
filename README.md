@@ -23,6 +23,18 @@ Takes data of the individual that they provide from the form and stores them in 
 ![code_1](https://github.com/thesdtiwari/ISM_Family/blob/master/public/code_1.png)<br/>
 ![code_2](https://github.com/thesdtiwari/ISM_Family/blob/master/public/code_2.png)
 
+### Running App
+In the project directory, you can run:<br\>
+
+`npm install` 
+
+Installs all the npm modules, as specified in package.json file.
+
+
+Run the app by using `node app.js` command in terminal
+
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
 ### Future Updates
 Very soon section for internship and placement results and Interview will be added just like Members and events section.
