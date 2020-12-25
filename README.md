@@ -16,11 +16,11 @@ Purpose of this project is to create small families in ism based on their state 
 Takes data of the individual that they provide from the form and stores them in firebase real-time database, whereas image of the individual is uploaded to the firebase storage with the help of multer and its url is added in real-time database.For displaying members it traverse through the database and according to their state/branch/club it displays in their respective pages.Whereas events section is hardcoded for respective state/branch/club page.
 
 ### Screenshots
-![Branches](/public/Branches.pnj)
-![code_1](/public/code_1.pnj)
-![code_2](/public/code_2.pnj)
-![Clubs](/public/Clubs.pnj)
-![Events](/public/Events.pnj)
+![Branches](./public/Branches.pnj)
+![code_1](./public/code_1.pnj)
+![code_2](./public/code_2.pnj)
+![Clubs](./public/Clubs.pnj)
+![Events](./public/Events.pnj)
 
 
 ### Future Updates
