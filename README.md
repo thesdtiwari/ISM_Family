@@ -1,7 +1,7 @@
 # ISM_Families
 
 ### Purpose
-Purpose of this project is to create small families in ism based on their state from where they come,Branch and Clubs that they have choosen.This projects helps us to know about basic info of members in our family by knowing their Name,Place,Branch and knowing them by face too which opens gates for interaction.Also as a group is living together for great amount of time and hence create many memories.These memories are preserved in events section and one can feel joy by looking back in time and reliving the moments.Very soon internship and placement results and interview section will be added.
+Purpose of this project is to create small families in ism based on their state from where they come,Branch and Clubs that they have choosen.This projects helps us to know about basic info of members in our family by knowing their Name,Place,Branch along with their image to identify which opens gates for interaction.Also as a group is living together for great amount of time and hence create many memories.These memories are preserved in events section and one can feel joy by looking back in time and reliving the moments.Very soon internship and placement results and interview section will be added.
 
 ### Tech Used
 1. HTML,CSS,JavaScript,Bootstrap for front-end.
@@ -24,7 +24,7 @@ Takes data of the individual that they provide from the form and stores them in 
 ![code_2](https://github.com/thesdtiwari/ISM_Family/blob/master/public/code_2.png)
 
 ### Running App
-In the project directory, you can run:<br\>
+In the project directory, you can run:
 
 `npm install` 
 
