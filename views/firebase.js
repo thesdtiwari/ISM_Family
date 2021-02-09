@@ -1,4 +1,7 @@
 alert('Welcome')
+console.log('entered firebase');
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyDMaA5m-BciLucpGL5Ypugqm8izHFb-KNQ",
     authDomain: "ism-firebase-3cf58.firebaseapp.com",
@@ -42,11 +45,9 @@ document.getElementById('image').addEventListener("change", function(e) {
     document.getElementById('progress').innerHTML = 'Wait, Uploading ' + Math.round(progress) +'% done' ;
     if(progress == 100){
     document.getElementById('progress').innerHTML = 'Click on Submit' ;
-
     }
+})
 
-  })
-  
   uploadTask.then(function(snapshot){
     console.log('entered')
     
@@ -57,11 +58,12 @@ document.getElementById('image').addEventListener("change", function(e) {
       console.log(imgUrl + ' is the url');
     })
   });  
-
-  
-  
 })  
 
+
+// creating array
+
+var arr = [];
 // Variables initialization
 function submitForm(e){
     e.preventDefault();
@@ -73,9 +75,11 @@ function submitForm(e){
    intern  = getInputVal('intern');
    placed = getInputVal('placed');
    year = getInputVal('year');
-    console.log(club);
-
-    var newData = data.push()
+  
+   console.log(name,place,state,branch,year);
+  arr.push(name,place,state,branch,club,intern,placed,year,imgUrl);
+  console.log(arr);
+  var newData = data.push()
     
     newData.set({
       name: name,
@@ -90,4 +94,6 @@ function submitForm(e){
       club:club
     });
 
+
+   console.log('tanSun');
 }

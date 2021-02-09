@@ -362,7 +362,6 @@
         </div>
     </div>
 
-
     <div class="dropdown" id="batch2024">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2019-Batch</div>
     </div>
@@ -394,6 +393,7 @@
             </div>
         </div>
     </div>  
+
     <div class="dropdown" id="batch2025">
         <div class="btn btn-secondary dropdown-toggle" style="width: 100%;" >2020-Batch</div>
     </div>
@@ -425,6 +425,35 @@
             </div>
         </div>
     </div>   
+
+    <div class="" id="batch-2025-vis">
+        <div class="  d-flex flex-column align-items-center m-3 " style="width: 94%;margin: auto;">
+            <div class="batch-name">SQL-Batch</div> 
+            <div class="container d-flex   flex-column">  
+                <div class="row justify-content-around">    
+                    
+                        <%for(var i = 0; i<sql.length; i++){ %>
+                            
+                                <div class="card m-3"onclick="this.classList.toggle('expanded')" style="width: 18rem;">
+                                    <div class="img-container">
+                                        <img src= '/<%= sql[i].image %>' class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body ">
+                                        <p class="card-text">
+                                            <div><%= sql[i].name %></div>
+                                            <div><%= sql[i].place %> , <%= sql[i].state %>< </div>
+                                            <div><%= sql[i].branch %> </div>
+                                        </p>
+                                        <div class="intern">Intern : <%= sql[i].intern %><br>Placed : <%= sql[i].placed %></div> </div>
+
+                                        <svg class="chevron"  viewBox="0 0 100 105" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#f00" stroke-width="5"/></svg>
+                                </div>
+                            
+                        <%}%>
+                </div>  
+            </div>
+        </div>
+    </div> 
 </div>
 
 <div id="events" class="d-none " >
@@ -479,7 +508,6 @@
         <% } %>
     <div style="text-align: center;"> To add images and videos of events happened in this state/branch/club contact Saurabh Tiwari</div>
 </div>
-
 
 <span class="d-flex justify-content-center " style="font-size:x-large;">
     &COPY; Saurabh Tiwari

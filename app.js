@@ -6,14 +6,8 @@ var express = require('express'),
     storage = require('@google-cloud/storage'),
     firebase = require('firebase'),
     admin = require("firebase-admin"),
+    mysql = require('mysql'),
     app = express();
-
-
-
-
-
-
-
 
 
     
@@ -54,6 +48,20 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "views")));
 
+var connection = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : '',
+    database : 'myISMdb'
+})
+
+
+connection.connect(function(error){
+//   connection.query("SELECT * FROM ism_data", function (err, result, fields) {
+//     if (err) throw err;
+//     console.log(result[3]);
+//   });
+})
 
 
 mongoose.connect('mongodb+srv://thesdtiwari:Saurabh100@cluster0.laykv.mongodb.net/ism-data?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true});
@@ -101,23 +109,21 @@ app.get('/index.ejs',function(req,res){
 
 app.get('/index/:id',function(req,res){
     var id = req.params.id;
-    console.log(id);
-   
     
     data.find({}, function(err, allCampgrounds){
 
         firebase.database().ref('ism_data').once('value').then(function(snapshot){
-    
-        //console.log(snapshot.val())
-        //console.log(allCampgrounds);
-        dataFire = snapshot.val();
-        //console.log(dataFire)
-        res.render('all', {params : allCampgrounds , id : id, firebase : dataFire}); 
-    }) 
+            dataFire = snapshot.val();
+            connection.connect(function(error){
+                connection.query("SELECT * FROM ism_data", function (err, result, fields) {
+                  
+                    res.render('all', {params : allCampgrounds , id : id, firebase : dataFire, sql : result}); 
+
+                });
+            })
+        }) 
         
     });
-
-    
 })
      
 app.get('/add',function(req,res){
@@ -138,49 +144,48 @@ app.get('/maharashtra',function(req,res){
 app.post('/index', upload ,function(req,res){
 
 
-
+    console.log('added')
     var name    = req.body.name,
         state   = req.body.state,
         place   = req.body.place,
         branch  = req.body.branch,
+        club    = req.body.club,
         year    = req.body.year ,
         intern  = req.body.intern,
         placed  = req.body.placed,
         image   = req.file.path;
     image = image.replace(/\\/g, "/");
-
+    
     data.create({
         name : name,
         state : state,
         place : place,
         branch : branch,
+        club : club,
         year : year,
         intern : intern,
         placed : placed,
         image : image
     });
+
+    connection.connect(function(error){
+        var sql = "INSERT INTO ism_data (name , place , state ,branch, club ,intern ,placed ,year ,image ) VALUES ?";
+        value = [[name,place,state,branch,club,intern,placed,year,image]]
+        connection.query(sql, [value],function (err, result) {
+          if (err) throw err;
+          console.log("New record inserted");
+        });
+    })
     // if(state == "Maharashtra"){
     //     data.find({}, function(err, allCampgrounds){
     //         console.log('Entered mh');
     //         res.render("maharashtra", {params :allCampgrounds});
     //     });
     // }
-    // if(branch == "Mathmatics and Computing"){
-    //     data.find({}, function(err, allCampgrounds){
-    //         console.log('MnC');
-    //         res.render("mnc", {params :allCampgrounds});
-    //     });
-    // }
-
 });
 
 
-// firebase.database().ref('ism_data').once('value').then(function(snapshot){
-//     console.log('firebase data')
-//     console.log(snapshot.val())
-// })
-
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`listening on:`, port));
 
 
