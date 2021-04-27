@@ -1,4 +1,4 @@
-var express = require('express'),
+    var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     path = require('path'),
@@ -29,7 +29,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-
 // var db = admin.database();
 // var ref = db.ref("ism_data");
 // ref.on("value", function(snapshot) {
@@ -49,19 +48,31 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "views")));
 
 var connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'myISMdb'
+    host : 'https://databases-auth.000webhost.com/index.php',
+    user : 'id16271993_sdtuser',
+    password : '!L\>/Djd$f2m7No#',
+    database : 'id16271993_sdt',
+    port : ''
 })
 
 
-connection.connect(function(error){
+
+
+
+connection.connect(function(err){
+    // console.log('err hone wala')
+    // if (err) throw err;
+    // console.log("Connected!");
+    // var sql = "CREATE TABLE ism_data (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255),place VARCHAR(255),state VARCHAR(255),branch VARCHAR(255),club VARCHAR(255),intern VARCHAR(255),placed VARCHAR(255),year VARCHAR(255),image VARCHAR(255), )";
+    // connection.query(sql, function (err, result) {
+    // if (err) throw err;
+    // console.log("Table created");
+});
 //   connection.query("SELECT * FROM ism_data", function (err, result, fields) {
 //     if (err) throw err;
 //     console.log(result[3]);
 //   });
-})
+
 
 
 mongoose.connect('mongodb+srv://thesdtiwari:Saurabh100@cluster0.laykv.mongodb.net/ism-data?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true});
@@ -169,12 +180,12 @@ app.post('/index', upload ,function(req,res){
     });
 
     connection.connect(function(error){
-        var sql = "INSERT INTO ism_data (name , place , state ,branch, club ,intern ,placed ,year ,image ) VALUES ?";
-        value = [[name,place,state,branch,club,intern,placed,year,image]]
-        connection.query(sql, [value],function (err, result) {
-          if (err) throw err;
-          console.log("New record inserted");
-        });
+        // var sql = "INSERT INTO ism_data (name , place , state ,branch, club ,intern ,placed ,year ,image ) VALUES ?";
+        // value = [[name,place,state,branch,club,intern,placed,year,image]]
+        // connection.query(sql, [value],function (err, result) {
+        //   if (err) throw err;
+        //   console.log("New record inserted");
+        // });
     })
     // if(state == "Maharashtra"){
     //     data.find({}, function(err, allCampgrounds){

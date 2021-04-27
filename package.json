@@ -16,8 +16,10 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
+    "pg": "^8.5.1",
     "process": "^0.11.10",
-    "prompt": "^1.0.0"
+    "prompt": "^1.0.0",
+    "sqlite": "^4.0.19"
   },
   "devDependencies": {
     "ejs-lint": "^1.1.0"
